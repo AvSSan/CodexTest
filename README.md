@@ -15,11 +15,12 @@ Now it also displays a small pixel-art cat for extra cuteness.
 
 ## Running the pink cat timer
 
-If you prefer a slightly calmer look with a gentle pink background and white
-digits, run:
+If you prefer a calmer look with a gentle pink background and white digits, run:
 
 ```
 python cat_timer.py
 ```
 
-This alternative timer keeps the cute pixel cat but uses softer colors.
+This alternative timer keeps the cute pixel cat but uses softer colors. The cat
+now blinks and a tiny pixel heart is displayed for extra charm. You can pause
+and resume the countdown using the **Pause** button.
