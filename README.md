@@ -11,3 +11,4 @@ python memetime.py
 ```
 
 The interface is intentionally "memey" with bright colors and silly text.
+Now it also displays a small pixel-art cat for extra cuteness.
