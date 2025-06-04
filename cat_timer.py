@@ -48,27 +48,6 @@ def create_cat_image(blink=False):
     return ImageTk.PhotoImage(img)
 
 
-def create_heart_image():
-    """Return a small pixel heart."""
-    size = 32
-    img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(img)
-    draw.polygon(
-        [(16, 28), (0, 12), (8, 0), (16, 8), (24, 0), (32, 12)],
-        fill="red",
-    )
-    return ImageTk.PhotoImage(img)
-
-
-def create_yarn_image():
-    """Return a pixel-art yarn ball."""
-    size = 32
-    img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(img)
-    draw.ellipse([4, 4, 28, 28], fill="#ff69b4")
-    draw.line([8, 8, 24, 24], fill="white")
-    draw.line([24, 8, 8, 24], fill="white")
-    return ImageTk.PhotoImage(img)
 
 
 def update_timer():
@@ -105,13 +84,7 @@ root.title("Котиковый таймер")
 root.geometry("350x300")
 root.configure(bg="#FFB6C1")  # light pink
 
-cat_images = [create_cat_image(False), create_cat_image(True)]
-heart_image = create_heart_image()
-yarn_image = create_yarn_image()
-timer_label = tk.Label(
-    root, text="", font=("Arial", 40, "bold"), bg="#FFB6C1", fg="white"
-)
-timer_label.pack(pady=10)
+
 
 time_frame = tk.Frame(root, bg="#FFB6C1")
 hour_entry = tk.Entry(time_frame, width=2)
@@ -124,11 +97,14 @@ min_entry.pack(side="left")
 apply_btn = tk.Button(time_frame, text="Set", command=set_end_time)
 apply_btn.pack(side="left", padx=5)
 time_frame.pack(pady=5)
+timer_label = tk.Label(
+    root, text="", font=("Arial", 40, "bold"), bg="#FFB6C1", fg="#333333"
+)
+timer_label.pack(pady=10)
 
-heart_label = tk.Label(root, image=heart_image, bg="#FFB6C1")
-heart_label.pack(pady=5)
-yarn_label = tk.Label(root, image=yarn_image, bg="#FFB6C1")
-yarn_label.pack(pady=5)
+
+cat_label = tk.Label(root, image=cat_images[0], bg="#FFB6C1")
+cat_label.pack(pady=5)
 
 cat_label = tk.Label(root, image=cat_images[0], bg="#FFB6C1")
 cat_label.pack(pady=5)
