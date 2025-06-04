@@ -84,7 +84,7 @@ root.title("Котиковый таймер")
 root.geometry("350x300")
 root.configure(bg="#FFB6C1")  # light pink
 
-cat_images = [create_cat_image(False), create_cat_image(True)]
+
 
 time_frame = tk.Frame(root, bg="#FFB6C1")
 hour_entry = tk.Entry(time_frame, width=2)
@@ -102,6 +102,9 @@ timer_label = tk.Label(
 )
 timer_label.pack(pady=10)
 
+
+cat_label = tk.Label(root, image=cat_images[0], bg="#FFB6C1")
+cat_label.pack(pady=5)
 
 cat_label = tk.Label(root, image=cat_images[0], bg="#FFB6C1")
 cat_label.pack(pady=5)
