@@ -12,3 +12,16 @@ python memetime.py
 
 The interface is intentionally "memey" with bright colors and silly text.
 Now it also displays a small pixel-art cat for extra cuteness.
+
+## Running the pink cat timer
+
+If you prefer a calmer look with a gentle pink background and white digits, run:
+
+```
+python cat_timer.py
+```
+
+This alternative timer keeps the cute pixel cat but uses softer colors. The cat
+now blinks and is drawn with more detail along with additional pixel art (a
+heart and a ball of yarn). You can change the end-of-day time with the small
+input fields under the timer.
