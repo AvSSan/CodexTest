@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from PIL import Image, ImageDraw, ImageTk
 
 # Default end time for the workday
-END_HOUR = 17
+END_HOUR = 18
 END_MINUTE = 0
 
 blink_state = 0
@@ -108,9 +108,6 @@ root.configure(bg="#FFB6C1")  # light pink
 cat_images = [create_cat_image(False), create_cat_image(True)]
 heart_image = create_heart_image()
 yarn_image = create_yarn_image()
-cat_label = tk.Label(root, image=cat_images[0], bg="#FFB6C1")
-cat_label.pack(pady=5)
-
 timer_label = tk.Label(
     root, text="", font=("Arial", 40, "bold"), bg="#FFB6C1", fg="white"
 )
@@ -132,6 +129,9 @@ heart_label = tk.Label(root, image=heart_image, bg="#FFB6C1")
 heart_label.pack(pady=5)
 yarn_label = tk.Label(root, image=yarn_image, bg="#FFB6C1")
 yarn_label.pack(pady=5)
+
+cat_label = tk.Label(root, image=cat_images[0], bg="#FFB6C1")
+cat_label.pack(pady=5)
 
 update_timer()
 root.mainloop()
